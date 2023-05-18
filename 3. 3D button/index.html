@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            min-height: 100vh;
+        }
+        button{
+        outline: none;
+        height: 65px;
+        cursor: pointer;
+
+        width: 235px;
+        border: 1px solid black;
+      
+        font-size: 35px;
+        transform: rotate(-2deg) skewX(2deg) translate(0, 0);
+        transition: 1s;
+        box-shadow: -30px 30px 60px rgb(136, 153, 137);
+}
+        button::before{
+
+        content: '';
+        border: 1px solid black;
+        position: absolute;
+        top: 10px;
+        height: 60px;
+        width: 20px;
+        left: -20px;
+        background: #ffffff;
+        transform: rotate(0deg) skewY(-45deg);
+        transition: 1s;
+    }
+
+        button::after{
+
+        content: '';
+        border: 1px solid black;
+        position: absolute;
+        bottom: -20px;
+        height: 19px;
+        width: 100%;
+        left: -9.5px;
+        background: #ffffff;
+        transform: rotate(0deg) skewX(-45deg);
+        transition: 1s;
+    }
+    button:hover{
+        margin-top: -45px;
+        color: rgb(0, 17, 17);
+        background-color: rgb(106, 233, 191);
+    }
+    button::before:hover{
+        margin-top: -45px;
+        color: rgb(0, 17, 17);
+        background-color: rgb(106, 233, 191);
+    }
+    button::after:hover{
+        margin-top: -45px;
+        color: rgb(0, 17, 17);
+        background-color: rgb(106, 233, 191);
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome 3D Buttons</title>
+</head>
+<body>
+    <button>Click Me</button>
+</body>
+</html>
