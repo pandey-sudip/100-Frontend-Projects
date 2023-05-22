@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Morphism Frosted Glass Over Image</title>
+</head>
+<body>
+    <div class="container">
+        <div class="img-box">
+
+        </div>
+        <div class="cursor" id="cursor">
+
+        </div>
+    </div>
+    
+</body>
+<script>
+    let cursor=document.getElementById('cursor');
+    document.addEventListener('mousemove', function(e){
+        var x=e.clientX;
+        var y=e.clientY;
+        cursor.style.left=x+"px";
+        cursor.style.top=y+"px";
+    })
+</script>
+</html>
