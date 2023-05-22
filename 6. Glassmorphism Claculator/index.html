@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Calculator</title>
+</head>
+<body>
+    <div class="calc-body">
+        <input type="text" name="" id="inp" readonly>
+        <table>
+            <tr>
+                <td>(</td>
+                <td>)</td>
+                <td>C</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>+</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>*</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td class="zero">0</td>
+                <td>.</td>
+                <td>%</td>
+                <td class="equal">=</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    let screen=document.getElementById('inp');
+    let buttons=document.querySelectorAll('td');
+    let screenValue='';
+    for(item of buttons){
+        item.addEventListener('click', (e)=>{
+            buttonText=e.target.innerText;
+            if(buttonText=="C"){
+                screenValue="";
+                screen.value=screenValue;
+            }
+            else if(buttonText=="="){
+                screen.value=eval(screenValue);
+            }
+            else{
+                screenValue+=buttonText;
+                screen.value=screenValue;
+            }
+        });
+    }
+</script>
+</html>
